@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vojtěch Koubek</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="menu">
+        <nav>
+            <div class="site-link">
+                <a href="http://www.stud.fit.vutbr.cz/~xkoubev00">Vojtěch Koubek</a>
+            </div>
+            
+          <ul>
+            <li><a href="#hero">Úvod</a></li>
+            <li><a href="#about">O mně</a></li>
+            <li><a href="#projects">Projekty</a></li>
+            <li><a href="#contacts">Kontakt</a></li>
+            <li><a href="#skills">Dovednosti</a></li>
+          </ul>
+     
+          <div class="switch-container">
+            <input type="checkbox" id="switch" aria-label="Změna módu stránky" class="switch">
+            <label for="switch" class="oval"></label>
+          </div>
+          <div class="burger" id="burger-menu" role="button" aria-label="Otevřít menu">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+
+    </div>
+    
+    <section id="hero">
+        <canvas id="sit-pozadi"></canvas>
+
+        <div id="introduction">
+            <h1 class="pro">VOJTĚCH KOUBEK</h1>
+            <h2 class="pro">Profesionální programátor</h2>
+
+            <h1 class="real hidden">JÁ</h1>
+  
+        </div>
+    </section>
+    
+
+
+
+    <section id="about">
+        <h2>O mně</h2>
+        <p>Zde najdete nějaké informace o tom kdo jsem a co mě baví.</p>
+        
+        <div class="all">
+            
+            <div class="content">
+                <div id="text">
+                
+                    <div>
+                        <h3 class="pro">Kdo jsem?</h3>
+                        <p class="pro">Jsem Vojtěch Koubek, programátor, kterého baví tvořit komplexní a funkční řešení. Nezaměřuji 
+                            se jen na to, aby věci hezky vypadaly, ale hlavně na to, aby spolehlivě fungovaly pod kapotou.
+                        </p>
+
+                        <h3 class="real hidden">Kdo jsem?</h3>
+                        <p class="real hidden">
+                            Doopravdy jsem Vojtěch Koubek a jsem programátor. Na to, aby věci vypadaly hezky se nezaměřuji vůbec.
+                            
+                        </p>
+                    </div>
+
+                    
+                    
+                    <div>
+                        <h3 class="pro">Co dělám?</h3>
+                        <p class="pro">Mám za sebou reálné projekty – od tvorby e-shopů a prezentačních webů pro lokální podniky až 
+                            po vývoj softwaru. Díky širokému přesahu od webových technologií (HTML, CSS, JS, PHP) přes silné 
+                            backendové jazyky (Python, C#, C) až po hardware (Arduino, Raspberry Pi) dokážu propojit různé světy 
+                            a najít to nejefektivnější řešení pro každý projekt. Mým cílem je převést vaši vizi do digitální reality.
+                        </p>
+
+                        <h3 class="real hidden">Co dělám?</h3>
+                        <p class="real hidden">
+                            Převádím nápady do reality pomocí kódu. Ve skutečnosti to ale znamená hodiny hledání problémů, které mají nakonec překvapivě 
+                            jednoduché řešení. Často mám vizi jak chci, aby daný program vypadal, ale vždy to skončí úplně jiným řešením.
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <h3 class="pro">Proč to dělám?</h3>
+                        <p class="pro">
+                            Programování je pro mě způsob ja řešit problémy. Baví mě hledat způsoby, jak převést 
+                            nápad na funkční program.
+                        </p>
+
+                        <h3 class="real hidden">Proč to dělám?</h3>
+                        <p class="real hidden">
+                            Na začátku to pro mě bylo něco nového a bavilo mě hledat způsoby jak řešit různé problémy. 
+                            Teď už je to pryč, ale věnoval jsem se programování moc dlouho na to, abych s tím přestal.
+                        </p>
+                    </div>
+                
+            </div>
+            <img src="images/vojta.webp" class="pro" alt="Moje fancy fotka">
+            <img src="images/ja.webp" class="real hidden" alt="Moje fotka v krizi">
+
+            </div>
+        </div>
+        
+
+        
+    
+    </section>
+
+    <section id="projects">
+        <h2>Projekty</h2>
+        <div id="proj1">
+            <h3>Webové stránky</h3>
+            <article class="card pro">
+                <div class="card-in">
+                    <div class="card-front">
+                        <img src="images/flyt.webp" alt="Náhled webové stránky">
+                    </div>
+                    <div class="card-back">
+                        <a href="https://flyt.cz/">flyt.cz</a>
+                        <h4>Společný web a osobní prezentace našeho týmu.</h4>
+                    </div>
+                </div>
+            </article>
+            <article class="card real hidden">
+                <div class="card-in">
+                    <div class="card-front">
+                        <img src="images/flyt.webp" alt="Náhled webové stránky">
+                    </div>
+                    <div class="card-back">
+                        <a href="https://flyt.cz/">flyt.cz</a>
+                        <h4>Dělal jsem pouze odesílaní formuláře.</h4>
+                    </div>
+                </div>
+            </article>
+            <article class="card pro">
+                <div class="card-in">
+                    <div class="card-front">
+                        <img src="images/modaberusky.webp" alt="Náhled webové stránky">
+                    </div>
+                    <div class="card-back">
+                        <a href="https://modaberusky.cz/">modaberusky.cz</a>
+                        <h4>Eshop s oblečením, který jsme vytvořili jako společný projekt.</h4>
+                    </div>
+                </div>
+            </article>
+             <article class="card real hidden">
+                <div class="card-in">
+                    <div class="card-front">
+                        <img src="images/modaberusky.webp" alt="Náhled webové stránky">
+                    </div>
+                    <div class="card-back">
+                        <a href="https://modaberusky.cz/">modaberusky.cz</a>
+                        <h4>Tady jsem reálně dělal databáze a celkové načítaní a ukládání dat do ní. Bylo to veliké trápení.</h4>
+                    </div>
+                </div>
+            </article>
+            <article class="card pro">
+                <div class="card-in">
+                    <div class="card-front">
+                        <img src="images/namlynku.webp" alt="Náhled webové stránky">
+                    </div>
+                    <div class="card-back">
+                        <a href="https://namlynku.cz/">namlynku.cz</a>
+                        <h4>Webová stránka pro lokání hospodu.</h4>
+                    </div>
+                </div>
+            </article>
+            <article class="card real hidden">
+                <div class="card-in">
+                    <div class="card-front">
+                        <img src="images/namlynku.webp" alt="Náhled webové stránky">
+                    </div>
+                    <div class="card-back">
+                        <a href="https://namlynku.cz/">namlynku.cz</a>
+                        <h4>Tady jsem dělal databázi, ukládání a načítaní položek v menu</h4>
+                    </div>
+                </div>
+            </article>
+            <article class="card pro">
+                <div class="card-in">
+                    <div class="card-front">
+                        <img src="images/ztracenyklice.webp" alt="Náhled webové stránky">
+                    </div>
+                    <div class="card-back">
+                        <a href="https://ztracenyklice.cz/">ztracenyklice.cz</a>
+                        <h4>Webová stránka pro kapelu Ztracený klíče.</h4>
+                    </div>
+                </div>
+                
+            </article>
+            <article class="card real hidden">
+                <div class="card-in">
+                    <div class="card-front">
+                        <img src="images/ztracenyklice.webp" alt="Náhled webové stránky">
+                    </div>
+                    <div class="card-back">
+                        <a href="https://ztracenyklice.cz/">ztracenyklice.cz</a>
+                        <h4>Také jsem dělal pouze odesílání formuláře</h4>
+                    </div>
+                </div>
+                
+            </article>
+
+        </div>
+        
+        <div id="proj2">
+            <h3>Ostatní</h3>
+            <article class="card pro">
+                <div class="card-in">
+                    <div class="card-front">
+                        <img src="images/lepikovac.webp" alt="Náhled lepíkovače">
+                    </div>
+                    <div class="card-back">
+                        <h4>Automatický odlepovač izolep z role, aby kousek izolepy někdo mohl rovnou vzít a nalepit.</h4>
+                    </div>
+                </div>
+                
+            </article>
+            <article class="card real hidden">
+                <div class="card-in">
+                    <div class="card-front">
+                        <img src="images/lepikovac.webp" alt="Náhled lepíkovače">
+                    </div>
+                    <div class="card-back">
+                        <h4>První a prozatím i poslední HW projekt. Skvělá zkušenost snad se někdy naskytne další.</h4>
+                    </div>
+                </div>
+                
+            </article>
+            <article class="card pro">
+                <div class="card-in">
+                    <div class="card-front">
+                        <img src="images/python.webp" alt="Logo Pythonu">
+                    </div>
+                    <div class="card-back">
+                        <h4>Program v pythonu, který dá na tapetu počítače nový citát při každém zapnutí.</h4>
+                    </div>
+                </div>
+                
+            </article>
+            <article class="card real hidden">
+                <div class="card-in">
+                    <div class="card-front">
+                        <img src="images/python.webp" alt="Logo Pythonu">
+                    </div>
+                    <div class="card-back">
+                        <h4>Zábavný a užitečný projekt. Nejhorší bylo najít kolem 100 citátů.</h4>
+                    </div>
+                </div>
+                
+            </article>
+            <article class="card" style="visibility: hidden;">
+                <h4>Pro jednodušší CSS :-)</h4>
+            </article>
+            <article class="card" style="visibility: hidden;">
+                <h4>Pro jednodušší CSS :-)</h4>
+            </article>
+        </div>
+    
+    </section>
+
+    <section id="contacts">
+        <h2>Kontakt</h2>
+        <div class="contacts-all">
+            <div class="contact-one">
+                <i class="fa-brands fa-instagram"></i>
+                <a href="https://www.instagram.com/vkoubek_/">vkoubek_</a>
+            </div>
+            <div class="contact-one">
+                <i class="fa-solid fa-at"></i>
+                <a href="mailto:vojtakoubek.50@seznam.cz">vojtakoubek.50@seznam.cz</a>
+            </div>
+            <div class="contact-one">
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+420607406845">+420 607 406 845</a>
+            </div>
+            
+
+        </div>
+
+        <form id="contact-form" action="">
+            <input id="name" aria-label="Jméno" type="text" placeholder="Jméno">
+            <input id="mail" aria-label="Email" type="email" placeholder="Email">
+            <textarea name="message" aria-label="Text zprávy" placeholder="Napište svou zprávu sem..." id="message"></textarea>
+            <button type="submit">Odeslat</button>
+        </form>
+        
+    </section>
+
+    <section id="skills">
+        <h2>Dovednosti</h2>
+        <div class="skills-grid">
+            <div class="skill"><i class="fa-brands fa-python"></i> Python</div>
+            <div class="skill"><i class="fa-solid fa-code"></i> C#</div>
+            <div class="skill"><i class="fa-solid fa-c"></i> C</div>
+            <div class="skill"><i class="fa-brands fa-js"></i> JavaScript</div>
+            <div class="skill"><i class="fa-solid fa-database"></i> SQL</div>
+            <div class="skill"><i class="fa-brands fa-html5"></i> HTML</div>
+            <div class="skill"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+            <div class="skill"><i class="fa-brands fa-php"></i> PHP</div>
+            <div class="skill"><i class="fa-solid fa-microchip"></i> Arduino</div>
+            <div class="skill"><i class="fa-brands fa-raspberry-pi"></i> Raspberry Pi</div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Vojtěch Koubek. Všechna práva vyhrazena.</p>
+            <div class="footer-links">
+                <a href="#hero" class="back-to-top">
+                    Zpět nahoru <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <div id="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,625 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #111827;
+    color: #FDF8EE;
+    font-family: 'Inter', sans-serif;
+}
+
+section {
+    padding: 0 5%;
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+
+h1, h2, h3, .menu nav ul a {
+    font-family: 'Fira Code', monospace;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    color: #FDF8EE;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 5px;
+    background-color: #818CF8;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
+/*HLAVNÍ NAVIGACE*/
+.menu{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000000;
+    background-color: rgba(17, 24, 39, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 15px 30px
+}
+
+.menu nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    list-style: none;
+}
+
+.menu nav .site-link a {
+    text-decoration: none;
+    color: #818CF8;
+    font-size: 1.5rem;
+    transition: color 1s ease;
+}
+
+.menu nav .site-link a:hover {
+    color: #FDF8EE;
+}
+
+
+.menu nav ul a {
+    font-size: 1.5rem;
+    color: #FDF8EE;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.menu nav ul a:hover {
+    color: #818CF8;
+}
+
+
+
+.burger {
+    display: none;
+    color: #FDF8EE;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color .5s ease;
+}
+
+.burger:hover {
+    color: #818CF8;
+}
+
+.switch {
+    display: none;
+}
+
+.oval {
+    width: 64px;
+    height: 32px;
+    background-color: #374151; /* Barva pro Profíka */
+    border-radius: 32px; /* Zakulatí rohy do tvaru pilulky */
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    transition: background-color 0.3s ease; /* Plynulá změna barvy */
+}
+
+.oval::after {
+    content: ''; /* Pseudo-element musí mít vždy content */
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border-radius: 50%; /* Udělá ze čtverce dokonalé kolečko */
+    transition: transform 0.3s ease; /* Plynulý odjezd do strany */
+}
+
+.switch:checked + .oval {
+    background-color: #818CF8;
+}
+
+.switch:checked + .oval::after {
+    transform: translateX(32px); /* Posune kolečko o 32 pixelů do strany */
+}
+
+
+/*ÚVODNÍ STRÁNKA*/
+#sit-pozadi{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99vw;
+    height: 100vh;
+    z-index: -1;
+    background-color: #111827;
+}
+
+.hero {
+    position: relative;
+    padding: 0;
+}
+
+#introduction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    
+}
+
+#introduction h1 {
+    font-size: clamp(2rem, 8vw, 8rem);
+    text-align: center;
+}
+
+#introduction h2 {
+    font-size: clamp(1rem, 4vw, 3.5rem);
+    text-align: center;
+}
+
+#introduction h2::after{
+    content: '';
+    padding: 0;
+    visibility: hidden;
+}
+
+/*SEKCE O MNĚ*/
+#about{
+    display: flex;
+    flex-direction: column;
+    background-color: #172133;
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#about img {
+    width: 35%;
+    padding: 20px;
+    object-fit:cover;
+}
+
+#about>p {
+    text-align: center;
+}
+
+#about #text p{
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    line-height: 1.7rem;
+    color: #9CA3AF;
+}
+
+#about #text h3 {
+    font-size: 2.2rem;
+    padding-top: 20px;
+}
+
+.content{
+    display: flex;
+}
+
+
+/*SEKCE PROJEKTY*/
+#projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    
+}
+
+#projects h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+#projects h3 {
+    
+    text-align: center;
+}
+
+#projects #proj1 {
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border-right: #374151 1px solid;
+    align-items: center;
+    padding-right: 10px;
+}
+
+#projects #proj1 h3 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin-bottom: 20px;
+}
+
+#projects #proj2 {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border-left: #374151 1px solid;
+    align-items: center;
+    padding-left: 10px;
+}
+
+#projects #proj2 h3 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin-bottom: 20px;
+}
+
+#projects .card {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    perspective: 1000px;
+    background-color: transparent;
+}
+
+#projects .card-in {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+#projects .card:hover .card-in {
+    transform: rotateY(180deg);
+}
+
+#projects .card-front, #projects .card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: #1F2937;
+    color: #FDF8EE;
+}
+
+#projects .card-front {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#projects .card-front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+#projects .card-back {
+    background-color: #1F2937;
+    color: #FDF8EE;
+    transform: rotateY(180deg);
+    padding: 20px;
+}
+
+#projects .card-back h4 {
+    font-size: 1.8vw;
+    font-weight: normal;
+}
+
+#projects .card-back a {
+    font-size: 1.5vw;
+    color: #818CF8;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/*SEKCE KONTAKTY*/
+#contacts {
+    height: 100vh;
+}
+
+#contacts .contacts-all{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; 
+}
+
+#contacts .contacts-all .contact-one i{
+    font-size: 2.5rem;
+}
+
+#contacts .contacts-all .contact-one a{
+    color: white;
+    text-decoration: none;
+}
+
+#contacts form {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contacts form input, #contacts form textarea {
+    background-color: #1F2937;
+    color: #FDF8EE;
+    border: 1px solid #374151;
+    border-radius: 10px;
+    padding: 10px;
+    width: 50%;
+    font-size: 1.5rem;
+}
+
+#contacts form input#name{
+    height: 50px;
+    margin: 10px;
+}
+
+#contacts form input#mail{
+    height: 50px;
+    margin: 10px;
+}
+
+#contacts form textarea{
+    height: 150px;
+    margin-top: 30px;
+}
+
+#contacts form button{
+    margin-top: 20px;
+    width: 25%;
+    height: 75px;
+    border-radius: 10px;
+    transition: ease .5s;
+    font-size: 2rem;
+    background-color: #818CF8;
+    color: #111827;
+    border: none;
+    cursor: pointer;
+}
+
+#contacts form button:hover{
+    background-color: #6366F1;
+}
+
+
+/*SEKCE DOVEDNOSTI*/
+#skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 5%;
+    min-height: 70vh;
+    background-color: #172133;
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#skills h2 {
+    margin-bottom: 50px;
+}
+
+#skills .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+#skills .skill {
+    background-color: #1F2937;
+    color: #FDF8EE;
+    padding: 20px 40px;
+    border-radius: 12px;
+    font-size: 1.8rem;
+    font-family: 'Fira Code', monospace;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 2px solid #374151;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+#skills .skill:hover {
+    border-color: #818CF8;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(129, 140, 248, 0.25);
+}
+
+#skills .skill i {
+    font-size: 2.5rem;
+    color: #818CF8;
+}
+
+/*PATIČKA*/
+footer {
+    background-color: #0B0F19;
+    border-top: 1px solid #1F2937;
+    padding: 30px 5%;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #9CA3AF;
+}
+
+.footer-content p {
+    font-size: 1rem;
+}
+
+.footer-links a.back-to-top {
+    color: #818CF8;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a.back-to-top:hover {
+    color: #3B82F6;
+    transform: translateY(-5px);
+}
+
+/*VYSKAKOVACÍ TEXT*/
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #374151;
+    color: #FDF8EE;
+    text-align: center;
+    border-radius: 10px;
+    padding: 16px 24px;
+    position: fixed;
+    z-index: 100000001;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    font-family: 'Fira Code', monospace;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid #818CF8;
+
+    opacity: 0;
+    transition: opacity 0.5s ease, top 0.5s ease;
+}
+
+#toast.show {
+    visibility: visible;
+    opacity: 1;
+    top: 50px;
+}
+
+/*RESPONZIVNÍ DESIGN PRO MENŠÍ OBRAZOVKY*/
+@media (max-width: 768px) {
+
+    .burger {
+        display: block;
+    }
+
+    .menu nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(17, 24, 39, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 20px 0;
+        gap: 30px;
+        text-align: center;
+        border-bottom: 1px solid #374151;
+    }
+
+    .menu nav ul.active {
+        display: flex;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #about img {
+        width: 80%;
+    }
+
+    #projects{
+        grid-template-columns: 1fr;
+    }
+
+    #projects #proj1, #projects #proj2 {
+        grid-column: 1;
+        border: unset;
+    }
+    #projects #proj1 {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: #374151 1px solid;
+    }
+
+    #projects .card-back h4 {
+        font-size: 3vw;
+        font-weight: normal;
+    }
+    #projects .card-back a {
+        font-size: 3vw;
+        font-weight: normal;
+    }
+
+
+    #contacts {
+        height: auto;
+    }
+
+    #contacts .contacts-all{
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5rem;
+        white-space: nowrap;
+    }
+
+    #contacts .contacts-all .contact-one i{
+        font-size: 1.5rem;
+    }
+
+    #contacts form input, #contacts form textarea {
+        width: 90%;
+    }
+
+    #contacts form button {
+        width: 60%;
+        font-size: 1.5rem;
+    }
+
+    #proj2 .card:nth-last-of-type(1), #proj2 .card:nth-last-of-type(2) {
+        display: none;
+    }
+}
