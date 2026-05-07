@@ -69,6 +69,7 @@ h2::after {
     align-items: center;
 }
 
+/* Použití Flexboxu pro horizontální zarovnání položek menu */
 .menu nav ul {
     display: flex;
     flex-direction: row;
@@ -225,12 +226,15 @@ h2::after {
     padding-top: 20px;
 }
 
+/* Flexbox pro zobrazení textu a obrázku vedle sebe */
 .content{
     display: flex;
 }
 
 
 /*SEKCE PROJEKTY*/
+
+/* CSS Grid pro dvousloupcové rozložení celé sekce */
 #projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -247,6 +251,7 @@ h2::after {
     text-align: center;
 }
 
+/* Vnořený Grid pro konkrétní karty projektů */
 #projects #proj1 {
     grid-column: 1;
     display: grid;
@@ -263,6 +268,7 @@ h2::after {
     margin-bottom: 20px;
 }
 
+/* Vnořený Grid pro konkrétní karty projektů */
 #projects #proj2 {
     grid-column: 2;
     display: grid;
